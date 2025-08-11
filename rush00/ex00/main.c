@@ -6,12 +6,12 @@
 /*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 10:38:53 by ldzuba            #+#    #+#             */
-/*   Updated: 2025/08/11 16:23:57 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/11 23:27:22 by florentchia      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int x, int y);
 void	rush00(int x, int y);
+void	rush(int x, int y);
 void	rush02(int x, int y);
 void	rush03(int x, int y);
 void	rush04(int x, int y);
