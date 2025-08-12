@@ -6,9 +6,11 @@
 /*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 10:38:53 by ldzuba            #+#    #+#             */
-/*   Updated: 2025/08/11 23:27:22 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/12 11:10:33 by florentchia      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	rush00(int x, int y);
 void	rush(int x, int y);
@@ -93,6 +95,8 @@ int	main(int argc, char *argv[])
 				x = ft_atoi(argv[++i]);
 		else if (ft_strcmp(argv[i], "-y") == 0 && i + 1 < argc)
 				y = ft_atoi(argv[++i]);
+		else
+				return (write(1, "WRONG ARGUMENT, SEE HELP WITH -h\n", 37) || 1);
 		i++;
 	}
 
