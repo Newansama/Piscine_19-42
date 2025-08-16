@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 20:51:45 by florentchia       #+#    #+#             */
-/*   Updated: 2025/08/14 15:50:53 by fchiappe         ###   ########.fr       */
+/*   Created: 2025/08/15 08:16:30 by fchiappe          #+#    #+#             */
+/*   Updated: 2025/08/15 08:20:19 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2, unsigned int n)
+int	ft_sqrt(int nb)
 {
-	unsigned int	i;
+	long i;
 
 	i = 0;
-	while (i < n)
-	{
-		if (s1[i] != s2[i] || s1[i] == '\0')
-			return (s1[i] - s2[i]);
+	if (nb <= 0)
+		return (0);
+	while (i * i < nb)
 		i++;
-	}
-	return (0);
+	if (i * i == nb)
+		return (i);
+	else
+		return (0);
 }

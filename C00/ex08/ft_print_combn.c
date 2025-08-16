@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 20:51:45 by florentchia       #+#    #+#             */
-/*   Updated: 2025/08/14 15:50:53 by fchiappe         ###   ########.fr       */
+/*   Created: 2025/08/12 13:12:05 by fchiappe          #+#    #+#             */
+/*   Updated: 2025/08/12 13:13:43 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int	i;
+#include <unistd.h>
 
-	i = 0;
-	while (i < n)
-	{
-		if (s1[i] != s2[i] || s1[i] == '\0')
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
+void    ft_print_combn(int n)
+{
+    
 }

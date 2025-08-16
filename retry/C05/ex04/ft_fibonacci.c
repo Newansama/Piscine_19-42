@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 20:51:45 by florentchia       #+#    #+#             */
-/*   Updated: 2025/08/14 15:50:53 by fchiappe         ###   ########.fr       */
+/*   Created: 2025/08/15 08:12:17 by fchiappe          #+#    #+#             */
+/*   Updated: 2025/08/15 08:14:54 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2, unsigned int n)
+int	ft_fibonacci(int index)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (s1[i] != s2[i] || s1[i] == '\0')
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }

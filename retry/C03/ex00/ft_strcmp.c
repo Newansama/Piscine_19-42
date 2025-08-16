@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
+/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 20:38:58 by florentchia       #+#    #+#             */
-/*   Updated: 2025/08/13 20:46:42 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/14 15:50:36 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(s1[i] == s2[i] && s1[i])
-    {
-        i++;
-    }
-    return(s1[i] - s2[i]);
+	i = 0;
+	while (s1[i] == s2[i] && s1[i])
+	{
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

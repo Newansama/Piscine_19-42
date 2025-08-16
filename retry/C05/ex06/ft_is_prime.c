@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/13 20:51:45 by florentchia       #+#    #+#             */
-/*   Updated: 2025/08/14 15:50:53 by fchiappe         ###   ########.fr       */
+/*   Created: 2025/08/15 08:21:13 by fchiappe          #+#    #+#             */
+/*   Updated: 2025/08/15 08:31:11 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2, unsigned int n)
+int	ft_sqrt(int nb)
 {
-	unsigned int	i;
+	long i;
 
 	i = 0;
-	while (i < n)
-	{
-		if (s1[i] != s2[i] || s1[i] == '\0')
-			return (s1[i] - s2[i]);
+	if (nb <= 0)
+		return (0);
+	while (i * i < nb)
 		i++;
-	}
-	return (0);
+	if (i * i == nb)
+		return (i);
+	else
+		return (0);
+}
+
+int ft_is_prime(int nb)
+{
+    int i;
+
+    i = 2;
+    if (nb <= 1)
+    return (0);
+    while (i <= nb / 2 && i <= 46341)
+    {
+        if(nb % i == 0)
+        return (0);
+        i++;
+    }
+    return (1);
 }
