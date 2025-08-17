@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
+/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 16:09:47 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/16 18:11:30 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/17 14:44:52 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int total_len(int size, char **strs, char *sep)
 
 char    *ft_strjoin(int size, char **strs, char *sep)
 {
-    int *ret;
+    char *ret;
     int total;
     int i;
 

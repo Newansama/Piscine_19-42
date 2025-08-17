@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
+/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 10:51:40 by florentchia       #+#    #+#             */
-/*   Updated: 2025/08/17 11:19:04 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/17 16:47:18 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int white_space_or_sign(char str)
 {
-    if ((str >= 9 && str <= 13) || str == 32 || str == 127 
-                        || str == 43 || str == 45)
+    if (str <= 32 || str == 127 || str == 43 || str == 45)
     return (1);
     return (0);
 }
