@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 14:38:26 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/16 14:46:57 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/16 15:21:51 by florentchia      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

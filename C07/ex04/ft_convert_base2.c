@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_convert_base.c                                  :+:      :+:    :+:   */
+/*   ft_convert_base2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 09:38:39 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/18 11:19:19 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/19 07:52:25 by florentchia      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int	ft_strlen(char *str)
 {
@@ -49,57 +54,21 @@ int	is_valid_base(char *base)
 	return (1);
 }
 
-int	get_index_in_base(char c, char *base)
+void	ft_putnbr_base(int nb, char *base)
 {
-	int	i;
+	long	n;
+	int		base_len;
 
-	i = 0;
-	while (base[i])
-	{
-		if (base[i] == c)
-			return (i);
-		i++;
-	}
-	return (-1);
-}
-
-int	check_whitespace(char *str, int *ptr)
-{
-	int	i;
-	int	state;
-
-	i = 0;
-	state = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	while (str[i] == 45 || str[i] == 43)
-	{
-		if (str[i] == 45)
-			state *= -1;
-		i++;
-	}
-	*ptr = i;
-	return (state);
-}
-
-int	ft_atoi_base(char *str, char *base)
-{
-	int	i;
-	int	result;
-	int	sign;
-	int	base_len;
-
-	i = 0;
-	sign = check_whitespace(str, &i);
-	result = 0;
+	n = nb;
 	base_len = ft_strlen(base);
-	if (is_valid_base(base) == 1)
+	if (!is_valid_base(base))
+		return ;
+	if (n < 0)
 	{
-		while (str[i] != '\0' && get_index_in_base(str[i], base) < base_len)
-		{
-			result = result * base_len + get_index_in_base(str[i], base);
-			i++;
-		}
+		ft_putchar('-');
+		n = -n;
 	}
-	return (result * sign);
+	if (n >= base_len)
+		ft_putnbr_base(n / base_len, base);
+	ft_putchar(base[n % base_len]);
 }
