@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
+/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 10:38:53 by ldzuba            #+#    #+#             */
-/*   Updated: 2025/08/16 12:21:00 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/12 12:17:09 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,6 @@ void	rush02(int x, int y);
 void	rush03(int x, int y);
 void	rush04(int x, int y);
 void	ft_putchar(char c);
-
-void	ft_corner(int x, int y, int cx, int cy, char hg, char hd, char bg, char bd, char b, char space)
-{
-	if (cx == 0 && cy == 0)
-		ft_putchar(hg);
-	else if (cx == x - 1 && cy == 0)
-		ft_putchar(hd);
-	else if (cx == 0 && cy == y - 1)
-		ft_putchar(bg);
-	else if (cx == x - 1 && cy == y - 1)
-		ft_putchar(bd);
-	else if (cy == 0 || cy == y - 1)
-		ft_putchar(b);
-	else if (cx == 0 || cx == x - 1)
-		if (space != '\0')
-		ft_putchar(space);
-		else
-		ft_putchar(b);
-	else
-		ft_putchar(' ');
-}
 
 int	ft_atoi(char *str)
 {
@@ -78,37 +57,40 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
+void	ft_rush_select(int v, int x, int y)
+{
+	if (v == 0)
+		rush00(x, y);
+	else if (v == 1)
+		rush(x, y);
+	else if (v == 2)
+		rush02(x, y);
+	else if (v == 3)
+		rush03(x, y);
+	else if (v == 4)
+		rush04(x, y);
+}
+
 int	main(int argc, char *argv[])
 {
-	int	rush_select;
+	int	v;
 	int	x;
 	int	y;
-	int i;
+	int	i;
 
 	i = 1;
-
-	while ( i < argc)
+	while (i < argc)
 	{
-		if (ft_strcmp(argv[i], "-v") == 0 && i  < argc)
-				rush_select = ft_atoi(argv[++i]);
-		else if (ft_strcmp(argv[i], "-x") == 0 && i < argc)
-				x = ft_atoi(argv[++i]);
-		else if (ft_strcmp(argv[i], "-y") == 0 && i < argc)
-				y = ft_atoi(argv[++i]);
-		else
-				return (write(1, "WRONG ARGUMENT, SEE HELP WITH -h\n", 37) || 1);
+		if (ft_strcmp(argv[i], "-v") == 0)
+			v = ft_atoi(argv[++i]);
+		else if (ft_strcmp(argv[i], "-x") == 0)
+			x = ft_atoi(argv[++i]);
+		else if (ft_strcmp(argv[i], "-y") == 0)
+			y = ft_atoi(argv[++i]);
+		else if (argc == 0)
+			return (write(1, "WRONG ARGUMENT, SEE HELP WITH -h\n", 37) || 1);
 		i++;
 	}
-
-	if (rush_select == 0)
-		rush00(x, y);
-	else if (rush_select == 1)
-		rush(x, y);
-	else if (rush_select == 2)
-		rush02(x, y);
-	else if (rush_select == 3)
-		rush03(x, y);
-	else if (rush_select == 4)
-		rush04(x, y);
+	ft_rush_select(v, x, y);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 10:51:40 by florentchia       #+#    #+#             */
-/*   Updated: 2025/08/18 10:00:41 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/18 17:34:34 by florentchia      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,18 @@ void	ft_putnbr_base(int nb, char *base)
 		ft_putnbr_base(n / base_len, base);
 	ft_putchar(base[n % base_len]);
 }
-/*
+
 int	main(void)
 {
     ft_putnbr_base(-2147483648, "01");
+	ft_putchar('\n');
+	//ft_putnbr_base(-2147483648, "8");
+	//ft_putchar('\n');
+	ft_putnbr_base(-2147483648, "10");
+	ft_putchar('\n');
+	ft_putnbr_base(-2147483648, "12");
+	ft_putchar('\n');
+	ft_putnbr_base(-2147483648, "16");
+	ft_putchar('\n');
     return (0);
 }
-*/

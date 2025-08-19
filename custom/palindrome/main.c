@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/17 14:45:49 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/17 17:45:53 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/18 17:25:18 by florentchia      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,13 @@ int	is_palindrome(char *s1, char *s2)
 	i = 0;
 	if (s1[i] == s2[i])
 	{
-		ft_putstr(&s2[i]);
+		ft_putstr(&s1[i]);
+		ft_putstr(" is a palindrome.");
+	}
+	else
+	{
+		ft_putstr(&s1[i]);
+		ft_putstr(" is not a palindrome.");
 	}
 	ft_putstr("\n");
 	return (0);
