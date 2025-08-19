@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 09:38:39 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/18 11:15:50 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/19 15:11:15 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,11 @@ int	get_index_in_base(char c, char *base)
 {
 	int	i;
 
-	i = 0;
-	while (base[i])
+	i = -1;
+	while (base[++i])
 	{
 		if (base[i] == c)
 			return (i);
-		i++;
 	}
 	return (-1);
 }

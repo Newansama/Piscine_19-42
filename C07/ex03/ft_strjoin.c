@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 16:09:47 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/17 14:44:52 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/19 15:14:52 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,14 +73,13 @@ char    *ft_strjoin(int size, char **strs, char *sep)
     ret = malloc(sizeof(char) * (total + 1));
     if (ret == NULL)
     return (NULL);
-    i = 0;
+    i = -1;
     ret[0] = '\0';
-    while (i < size)
+    while (++i < size)
     {
         ft_strcat(ret, strs[i]);
         if (i < size - 1)
         ft_strcat(ret, sep);
-        i++;
     }
     return (ret);
 }
