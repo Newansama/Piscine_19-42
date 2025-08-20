@@ -6,80 +6,105 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 16:09:47 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/19 15:14:52 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/20 13:27:48 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-    i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-char    *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
-    int i;
-    int j;
+	int	i;
+	int	j;
 
-    i = 0;
-    j = 0;
-    while(dest[i] != '\0')
-    i++;
-    while (src[j] != '\0')
-    {
-        dest[i] = src[j];
-        i++;
-        j++;
-    }
-    dest[i] = '\0';
-    return (dest);
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
-int total_len(int size, char **strs, char *sep)
+int	total_len(int size, char **strs, char *sep)
 {
-    int total;
-    int i;
+	int	total;
+	int	i;
 
-    total = 0;
+	total = 0;
+	i = 0;
+	while (i < size)
+	{
+		total += ft_strlen(strs[i]);
+		i++;
+	}
+	total += ft_strlen(sep) * (size - 1);
+	return (total);
+}
+
+char	*ft_strjoin(int size, char **strs, char *sep)
+{
+	char	*ret;
+	int		total;
+	int		i;
+
+	if (size == 0)
+	{
+		ret = malloc(sizeof(char));
+		ret[0] = '\0';
+		return (ret);
+	}
+	total = total_len(size, strs, sep);
+	ret = malloc(sizeof(char) * (total + 1));
+	if (ret == NULL)
+		return (NULL);
+	i = -1;
+	ret[0] = '\0';
+	while (++i < size)
+	{
+		ft_strcat(ret, strs[i]);
+		if (i < size - 1)
+			ft_strcat(ret, sep);
+	}
+	return (ret);
+}
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*strs[];
+	int		size;
+	char	*sep;
+	int		i;
+	char	*all_together;
+
+    strs[] = {"Hello", "test", "myeuk", "Filipe", "Sami", "Sami hgoun"};
+    size = 6;
+    sep = " ";
     i = 0;
+    all_together = ft_strjoin(size, strs, sep);
     while (i < size)
     {
-        total += ft_strlen(strs[i]);
+        printf("Next strings in index : %s\n", strs[i]);
         i++;
     }
-    total += ft_strlen(sep) * (size - 1);
-    return (total);
+    printf("%s", all_together);
+    free(all_together);
 }
-
-char    *ft_strjoin(int size, char **strs, char *sep)
-{
-    char *ret;
-    int total;
-    int i;
-
-    if (size == 0)
-    {
-        ret = malloc(sizeof(char));
-        ret[0] = '\0';
-        return (ret);
-    }
-    total = total_len(size, strs, sep);
-    ret = malloc(sizeof(char) * (total + 1));
-    if (ret == NULL)
-    return (NULL);
-    i = -1;
-    ret[0] = '\0';
-    while (++i < size)
-    {
-        ft_strcat(ret, strs[i]);
-        if (i < size - 1)
-        ft_strcat(ret, sep);
-    }
-    return (ret);
-}
+*/

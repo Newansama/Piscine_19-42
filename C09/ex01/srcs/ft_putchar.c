@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fchiappe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/19 13:48:51 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/20 13:31:56 by fchiappe         ###   ########.fr       */
+/*   Created: 2025/08/05 16:18:57 by fchiappe          #+#    #+#             */
+/*   Updated: 2025/08/05 16:48:39 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_abs.h"
-#include <stdio.h>
+#include <unistd.h>
 
-int	main(void)
+void	ft_putchar(char c)
 {
-	printf("%d", ABS(-5));
+	write(1, &c, 1);
 }
+
+/*
+int main(void) {
+	ft_putchar('a');
+}
+*/

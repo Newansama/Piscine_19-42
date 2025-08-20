@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fchiappe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/19 13:48:51 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/20 13:31:56 by fchiappe         ###   ########.fr       */
+/*   Created: 2025/08/06 13:45:53 by fchiappe          #+#    #+#             */
+/*   Updated: 2025/08/06 14:17:19 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_abs.h"
-#include <stdio.h>
+#include <unistd.h>
+//#include <stdio.h>
 
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+/*
 int	main(void)
 {
-	printf("%d", ABS(-5));
+	char	*str = "test";
+	int	length; 	
+	
+	length = ft_strlen(str);
+
+	printf("String: %s\nLength: %d\n", str, length);
 }
+*/

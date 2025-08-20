@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/19 13:48:51 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/20 13:31:56 by fchiappe         ###   ########.fr       */
+/*   Created: 2025/08/19 09:44:39 by fchiappe          #+#    #+#             */
+/*   Updated: 2025/08/19 09:50:00 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_abs.h"
-#include <stdio.h>
+#ifndef FT_H
+# define FT_H
 
-int	main(void)
-{
-	printf("%d", ABS(-5));
-}
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
+
+#endif

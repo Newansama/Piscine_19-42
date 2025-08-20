@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
+/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 11:20:17 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/19 16:14:53 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/20 13:28:07 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

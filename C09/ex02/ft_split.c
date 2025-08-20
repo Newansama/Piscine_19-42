@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 08:13:05 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/20 13:29:26 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/20 08:39:49 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,9 @@ char	*split_word(char *str, char *sep)
 
 char	**ft_split(char *str, char *charset)
 {
-	int		i;
-	int		j;
-	char	**words;
+	int i;
+	int j;
+	char **words;
 
 	i = 0;
 	j = 0;
