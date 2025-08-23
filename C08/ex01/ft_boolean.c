@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 11:08:06 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/20 13:32:40 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/23 15:42:02 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	ft_putstr(char *str)
 
 t_bool	ft_is_even(int nbr)
 {
-	return ((EVEN(nbr)) ? TRUE : FALSE);
+	if (nbr % 2 == 0)
+		return (TRUE);
+	else
+		return (FALSE);
 }
 
 int	main(int argc, char **argv)

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_show_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
+/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 17:25:19 by florentchia       #+#    #+#             */
-/*   Updated: 2025/08/20 17:34:04 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/23 15:39:10 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_stock_str.h"
 #include <stdlib.h>
 #include <unistd.h>
-#include "ft_stock_str.h"
 
 void	ft_putchar(char c)
 {
@@ -52,15 +52,17 @@ void	ft_putnbr(int nb)
 
 void	ft_show_tab(struct s_stock_str *par)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (par[i].str != NULL)
 	{
-        ft_putstr(par[i].str);
+		ft_putstr(par[i].str);
+		ft_putchar('\n');
 		ft_putnbr(par[i].size);
-        ft_putchar('\n');
-        ft_putstr(par[i].copy);
+		ft_putchar('\n');
+		ft_putstr(par[i].copy);
+		ft_putchar('\n');
 		i++;
 	}
 }
