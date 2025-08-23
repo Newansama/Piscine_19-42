@@ -12,20 +12,28 @@
 
 #include <stdlib.h>
 
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
 char	*ft_strdup(char *src)
 {
 	char	*dest;
 	int		i;
-	int		lenght;
 
-	lenght = 0;
-	while (src[lenght])
-		lenght++;
-	dest = (char *)malloc(sizeof(char) * (lenght + 1));
-	if (dest == NULL)
+	if (!src)
+		return (NULL);
+	dest = malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (!dest)
 		return (NULL);
 	i = 0;
-	while (i < lenght)
+	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;
