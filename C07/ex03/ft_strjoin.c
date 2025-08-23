@@ -63,15 +63,17 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		total;
 	int		i;
 
+	if (!strs || !sep)
+    return (NULL);
 	if (size == 0)
 	{
-		ret = malloc(sizeof(char));
+		ret = malloc(1);
 		ret[0] = '\0';
 		return (ret);
 	}
 	total = total_len(size, strs, sep);
 	ret = malloc(sizeof(char) * (total + 1));
-	if (ret == NULL)
+	if (!ret)
 		return (NULL);
 	i = -1;
 	ret[0] = '\0';
@@ -83,20 +85,17 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	return (ret);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
 {
-	char	*strs[];
-	int		size;
-	char	*sep;
+	char	*strs[] = {"Hello", "test", "myeuk", "Filipe", "Sami", "Sami hgoun"};
+	int		size = 6;
+	char	*sep = " - ";
 	int		i;
 	char	*all_together;
 
-    strs[] = {"Hello", "test", "myeuk", "Filipe", "Sami", "Sami hgoun"};
-    size = 6;
-    sep = " ";
     i = 0;
     all_together = ft_strjoin(size, strs, sep);
     while (i < size)
@@ -107,4 +106,3 @@ int	main(void)
     printf("%s", all_together);
     free(all_together);
 }
-*/

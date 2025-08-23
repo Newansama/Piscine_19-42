@@ -41,3 +41,18 @@ char	*ft_strdup(char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+#include <stdio.h>
+int main(int arc, char **arv)
+{
+	if (arc == 2)
+	{
+		printf("%s\n", ft_strdup(arv[1]));
+	}
+	else
+	{
+		printf("%s\n", ft_strdup(""));
+	}
+	return (0);
+}
+*/

@@ -16,20 +16,40 @@ int	ft_ultimate_range(int **range, int min, int max)
 {
 	int	i;
 
-	*range = (int *)malloc(sizeof(int) * ((max - min) + 1));
 	if (min >= max)
 	{
 		*range = NULL;
 		return (0);
 	}
+	*range = malloc(sizeof(int) * (max - min));
 	i = 0;
 	if (*range == NULL)
 		return (-1);
 	while (min < max)
 	{
 		(*range)[i] = min;
-		i++;
 		min++;
+		i++;
 	}
 	return (i);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	int *array;
+	int i;
+
+	i = ft_ultimate_range(&array, 1, 20);
+	printf("size: %d\n", i);
+	i = 0;
+	while (i < 19)
+	{
+		printf("%d\n", array[i]);
+		i++;
+	}
+	free(array);
+	return(0);
+}
+*/

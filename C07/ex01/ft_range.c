@@ -17,18 +17,35 @@ int	*ft_range(int min, int max)
 	int	*array;
 	int	i;
 
-	array = (int *)malloc(sizeof(int) * ((max - min) + 1));
 	if (min >= max)
-	{
-		array = NULL;
-		return (0);
-	}
+		return (NULL);
+	array = malloc(sizeof(int) * (max - min));
+	if (!array)
+		return (NULL);
 	i = 0;
 	while (min < max)
 	{
 		array[i] = min;
-		i++;
 		min++;
+		i++;
 	}
 	return (array);
 }
+/*
+#include <stdio.h>
+int main()
+{
+	int *array;
+	int i;
+
+	array = ft_range(1, 20);
+	i = 0;
+	while (i < 19)
+	{
+		printf("%d\n", array[i]);
+		i++;
+	}
+	free(array);
+	return(0);
+}
+*/
