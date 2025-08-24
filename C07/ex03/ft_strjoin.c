@@ -50,6 +50,8 @@ int	total_len(int size, char **strs, char *sep)
 	i = 0;
 	while (i < size)
 	{
+		if (!strs[i])
+			return (0);
 		total += ft_strlen(strs[i]);
 		i++;
 	}
