@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 16:09:47 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/20 13:27:48 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/24 11:59:55 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ int	total_len(int size, char **strs, char *sep)
 	i = 0;
 	while (i < size)
 	{
-		if (!strs[i])
-			return (0);
 		total += ft_strlen(strs[i]);
 		i++;
 	}
@@ -62,14 +60,11 @@ int	total_len(int size, char **strs, char *sep)
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	char	*ret;
-	int		total;
 	int		i;
 
 	if (size <= 0)
 	{
 		ret = malloc(1);
-		if (!ret)
-			return (NULL);
 		ret[0] = '\0';
 		return (ret);
 	}
@@ -77,13 +72,12 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	if (!ret)
 		return (NULL);
 	ret[0] = '\0';
-	i = 0;
-	while (i < size)
+	i = -1;
+	while (++i < size)
 	{
 		ft_strcat(ret, strs[i]);
 		if (i < size - 1)
 			ft_strcat(ret, sep);
-		i++;
 	}
 	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 16:17:24 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/08 12:55:04 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/24 15:15:50 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strstr(char *str, char *to_find)
 #include <stdio.h>
 int	main(void)
 {
-	char	str[] = "Welcome to 42 Welcome to 42 !";
+	char	str[] = "Welcome to 42 !";
 	char	to_find[] = "to 42";
 
 	printf("%s\n", ft_strstr(str, to_find));

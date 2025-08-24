@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 09:38:39 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/19 09:33:29 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/24 17:00:20 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,23 +63,23 @@ int	get_index_in_base(char c, char *base)
 	return (-1);
 }
 
-int	check_whitespace(char *str, int *ptr)
+int	check_whitespace_sign(char *str, int *ptr)
 {
 	int	i;
-	int	state;
+	int	sign;
 
 	i = 0;
-	state = 1;
+	sign = 1;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
 	while (str[i] == 45 || str[i] == 43)
 	{
 		if (str[i] == 45)
-			state *= -1;
+			sign *= -1;
 		i++;
 	}
 	*ptr = i;
-	return (state);
+	return (sign);
 }
 
 int	ft_atoi_base(char *str, char *base)
@@ -88,16 +88,17 @@ int	ft_atoi_base(char *str, char *base)
 	int	result;
 	int	sign;
 	int	base_len;
+	int index;
 
 	i = 0;
-	sign = check_whitespace(str, &i);
+	sign = check_whitespace_sign(str, &i);
 	result = 0;
 	base_len = ft_strlen(base);
 	if (is_valid_base(base) == 1)
 	{
-		while (str[i] != '\0' && get_index_in_base(str[i], base) < base_len)
+		while ((index = get_index_in_base(str[i], base)) != -1)
 		{
-			result = result * base_len + get_index_in_base(str[i], base);
+			result = result * base_len + index;
 			i++;
 		}
 	}

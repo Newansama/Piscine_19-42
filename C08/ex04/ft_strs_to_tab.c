@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 15:39:01 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/23 15:39:29 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/24 12:20:33 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	struct s_stock_str	*arr;
 	int					i;
 
-	arr = (t_stock_str *)malloc(sizeof(t_stock_str) * (ac + 1));
+	arr = malloc(sizeof(t_stock_str) * (ac + 1));
 	i = 0;
 	if (arr == NULL)
 		return (NULL);

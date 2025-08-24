@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 09:53:22 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/20 13:30:10 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/24 15:55:29 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,18 @@
 
 # include <unistd.h>
 
-# define SUCCESS 0
-# define TRUE 1
-# define FALSE 0
-# define EVEN_MSG "I have an even number of arguments."
-# define ODD_MSG "I have an odd number of arguments."
+typedef int	t_bool;
 
 # define EVEN(nbr) (nbr % 2 == 0)
 
-typedef int	t_bool;
+# define TRUE 1
+# define FALSE 0
 
-void		ft_putstr(char *str);
-t_bool		ft_is_even(int nb);
+# define SUCCESS 0
+
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+
+# define EVEN(nbr) (nbr % 2 == 0)
 
 #endif
