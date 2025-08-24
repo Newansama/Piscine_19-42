@@ -65,25 +65,25 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		total;
 	int		i;
 
-	if (!strs || !sep)
-    return (NULL);
-	if (size == 0)
+	if (size <= 0)
 	{
 		ret = malloc(1);
+		if (!ret)
+			return (NULL);
 		ret[0] = '\0';
 		return (ret);
 	}
-	total = total_len(size, strs, sep);
-	ret = malloc(sizeof(char) * (total + 1));
+	ret = malloc(total_len(size, strs, sep) + 1);
 	if (!ret)
 		return (NULL);
-	i = -1;
 	ret[0] = '\0';
-	while (++i < size)
+	i = 0;
+	while (i < size)
 	{
 		ft_strcat(ret, strs[i]);
 		if (i < size - 1)
 			ft_strcat(ret, sep);
+		i++;
 	}
 	return (ret);
 }
