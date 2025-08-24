@@ -85,7 +85,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	return (ret);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -106,3 +106,4 @@ int	main(void)
     printf("%s", all_together);
     free(all_together);
 }
+*/
