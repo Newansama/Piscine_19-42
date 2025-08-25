@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 08:13:05 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/20 08:39:49 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/25 17:31:14 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,3 +94,24 @@ char	**ft_split(char *str, char *charset)
 	words[j] = 0;
 	return (words);
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    char *str = "Hello world this is split";
+    char *sep = " ";
+    char **result = ft_split(str, sep);
+
+    int i = 0;
+    while (result[i])
+    {
+        printf("%s\n", result[i]);
+        free(result[i]);
+        i++;
+    }
+    free(result);
+
+    return 0;
+}
+*/

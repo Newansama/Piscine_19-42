@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 08:13:05 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/24 15:45:15 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/25 17:30:38 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*split_word(char *str, char *sep)
 	i = 0;
 	while (str[i] && !is_sep(str[i], sep))
 		i++;
-	words = (char *)malloc(sizeof(char *) * (i + 1));
+	words = malloc(sizeof(char *) * (i + 1));
 	if (words == NULL)
 		return (NULL);
 	i = 0;
@@ -94,7 +94,7 @@ char	**ft_split(char *str, char *charset)
 	words[j] = 0;
 	return (words);
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -114,3 +114,4 @@ int main(void)
 
     return 0;
 }
+*/

@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/10 15:14:51 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/25 17:32:01 by fchiappe         ###   ########.fr       */
+/*   Created: 2025/08/19 09:44:39 by fchiappe          #+#    #+#             */
+/*   Updated: 2025/08/19 09:50:00 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_H
+# define FT_H
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-/*
-int	main(int argc, char **argv)
-{
-	int	i, j;
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 
-	i = 1;
-    while (i < argc)
-    {
-        j = 0;
-	while (argv[i][j])
-	{
-		ft_putchar(argv[i][j]);
-		j++;
-	}
-    ft_putchar('\n');
-    i++;
-    }
-}
-*/
+#endif

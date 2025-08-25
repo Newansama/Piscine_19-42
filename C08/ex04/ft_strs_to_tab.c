@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 15:39:01 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/24 12:20:33 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/25 11:12:45 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strdup(char *src)
 	lenght = 0;
 	while (src[lenght])
 		lenght++;
-	dest = (char *)malloc(sizeof(char) * (lenght + 1));
+	dest = malloc(lenght + 1);
 	if (dest == NULL)
 		return (NULL);
 	i = 0;

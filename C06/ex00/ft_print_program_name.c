@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/10 15:14:51 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/10 15:20:02 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/25 17:31:54 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	int	i;
@@ -28,3 +28,4 @@ int	main(int argc, char **argv)
 		i++;
 	}
 }
+*/

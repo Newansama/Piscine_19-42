@@ -6,7 +6,7 @@
 /*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 11:20:17 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/24 16:57:49 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/25 17:30:27 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	return (fill_str(nb, base_to, base_len, len));
 }
 
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -114,3 +115,4 @@ int main(void)
 
 	return 0;
 }
+*/
