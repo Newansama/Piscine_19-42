@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 09:53:22 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/24 15:55:29 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:13:14 by florentchia      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,5 @@ typedef int	t_bool;
 
 # define EVEN_MSG "I have an even number of arguments.\n"
 # define ODD_MSG "I have an odd number of arguments.\n"
-
-# define EVEN(nbr) (nbr % 2 == 0)
 
 #endif

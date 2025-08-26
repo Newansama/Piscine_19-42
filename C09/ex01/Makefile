@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+         #
+#    By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/20 09:50:00 by fchiappe          #+#    #+#              #
-#    Updated: 2025/08/20 13:03:24 by fchiappe         ###   ########.fr        #
+#    Updated: 2025/08/26 17:16:34 by florentchia      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = srcs/*.c
+SRCS = ${wildcard srcs/*.c}
 
 OBJS = ${SRCS:.c=.o}
 
@@ -34,7 +34,7 @@ clean:
 	${RM} ${OBJS}
 
 fclean: clean
-	${RM} ${OBJS}
+	${RM} ${NAME}
 
 re:	fclean all
 
