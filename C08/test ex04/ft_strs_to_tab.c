@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
