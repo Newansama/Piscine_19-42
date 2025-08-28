@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
+/*   By: fchiappe <fchiappe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 08:13:05 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/26 17:46:55 by florentchia      ###   ########.fr       */
+/*   Updated: 2025/08/27 14:19:50 by fchiappe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*split_word(char *str, char *sep)
 	i = 0;
 	while (str[i] && !is_sep(str[i], sep))
 		i++;
-	words = (char *)malloc(sizeof(char *) * (i + 1));
+	words = malloc(sizeof(char *) * (i + 1));
 	if (words == NULL)
 		return (NULL);
 	i = 0;
@@ -70,13 +70,13 @@ char	*split_word(char *str, char *sep)
 
 char	**ft_split(char *str, char *charset)
 {
-	int i;
-	int j;
-	char **words;
+	int		i;
+	int		j;
+	char	**words;
 
 	i = 0;
 	j = 0;
-	words = (char **)malloc(sizeof(char **) * (count_words(str, charset) + 1));
+	words = malloc(sizeof(char **) * (count_words(str, charset) + 1));
 	if (words == NULL || str == NULL || charset == NULL)
 		return (NULL);
 	while (str[i])
@@ -97,24 +97,21 @@ char	**ft_split(char *str, char *charset)
 /*
 #include <stdio.h>
 
-int	main(int ac, char **av)
+int main(void)
 {
-	if (ac == 2)
-	{
-		char **result = ft_split(av[1], " ");
-		int i = 0;
-		while (result[i])
-		{
-			printf("%s\n", result[i]);
-			free(result[i]);
-			i++;
-		}
-		free(result);
-	}
-	else
-	{
-		printf("\n");
-	}
-	return (0);
+    char *str = "Hello world this is split";
+    char *sep = " ";
+    char **result = ft_split(str, sep);
+
+    int i = 0;
+    while (result[i])
+    {
+        printf("%s\n", result[i]);
+        free(result[i]);
+        i++;
+    }
+    free(result);
+
+    return 0;
 }
 */
