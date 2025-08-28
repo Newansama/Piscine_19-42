@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ten_queens_puzle.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchiappe <fchiappe@student.s19.be>         +#+  +:+       +#+        */
+/*   By: florentchiappelloni <florentchiappellon    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 23:09:50 by fchiappe          #+#    #+#             */
-/*   Updated: 2025/08/23 23:09:50 by fchiappe         ###   ########.fr       */
+/*   Updated: 2025/08/28 07:21:10 by florentchia      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ int ft_ten_queens_puzzle(void)
 
 int	main(void)
 {
-	printf("Solutions founded: %d\n", ft_ten_queens_puzzle());
+	printf("Solutions found: %d\n", ft_ten_queens_puzzle());
 	return (0);
 }
