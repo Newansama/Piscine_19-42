@@ -1,6 +1,6 @@
 # Piscine 42
 
-[![C Badge](https://img.shields.io/badge/Language-C-blue?logo=c)](https://en.wikipedia.org/wiki/C_%28programming_language%29) [![Shell Badge](https://img.shields.io/badge/Shell-Bash-green?logo=gnu-bash)](https://www.gnu.org/software/bash/) [![Git Badge](https://img.shields.io/badge/Git-Version%20Control-orange?logo=git)](https://git-scm.com/) [![42 Badge](https://img.shields.io/badge/%C3%89cole-42-black?logo=42)](https://42.fr) [![19 Badge]([https://img.shields.io/badge/%C3%89cole-42-black?logo=42](https://img.shields.io/badge/École-19-black?logo=19))](https://campus19.be) [![GitHub Badge](https://img.shields.io/badge/GitHub-Repo-lightgrey?logo=github)](https://github.com/tonpseudo/piscine42)
+[![C Badge](https://img.shields.io/badge/Language-C-blue?logo=c)](https://en.wikipedia.org/wiki/C_%28programming_language%29) [![Shell Badge](https://img.shields.io/badge/Shell-Bash-green?logo=gnu-bash)](https://www.gnu.org/software/bash/) [![Git Badge](https://img.shields.io/badge/Git-Version%20Control-orange?logo=git)](https://git-scm.com/) [![42 Badge](https://img.shields.io/badge/%C3%89cole-42-black?logo=42)](https://42.fr) [![19 Badge](https://img.shields.io/badge/École-19-black?logo=19)](https://campus19.be) [![GitHub Badge](https://img.shields.io/badge/GitHub-Repo-lightgrey?logo=github)](https://github.com/tonpseudo/piscine42)
 
 Bienvenue dans mon dépôt GitHub dédié à ma **Piscine 42**.  
 Ce dépôt contient mes projets, exercices et travaux réalisés durant cette période.
